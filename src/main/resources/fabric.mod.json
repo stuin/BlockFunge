@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "blockfunge",
+  "version": "0.1.0",
+
+  "name": "BlockFunge",
+  "description": "Block based 3D programming language. No GUI required.",
+  "authors": [
+    "Stuin"
+  ],
+  "contact": {
+    "homepage": "https://stuin.github.io/minecraft",
+    "sources": "https://github.com/stuin/BlockFunge"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/blockfunge/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.stuintech.blockfunge.BlockFunge"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.4.8",
+    "fabric": "*"
+  },
+  "suggests": {
+    "reborncore": "*"
+  }
+}
