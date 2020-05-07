@@ -3,7 +3,6 @@ package com.stuintech.blockfunge.interpreter;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.Position;
 import net.minecraft.world.World;
 
 import java.util.Stack;
@@ -12,7 +11,7 @@ public interface Pointer {
     //World access
     BlockState getBlock();
     String getIdentifier();
-    Position getPos();
+    BlockPos getPosition();
     Direction getDirection();
     World getWorld();
     
@@ -25,6 +24,7 @@ public interface Pointer {
     void jump();
     void pause();
     void stop();
+    void toggleVisibility();
     
     //Stack interaction
     Stack<Integer> getStack();

@@ -5,9 +5,6 @@ import net.minecraft.block.LeverBlock;
 import net.minecraft.block.enums.WallMountLocation;
 import net.minecraft.util.math.Direction;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Movement {
     public static void lever(Pointer p) {
         Direction dir;
