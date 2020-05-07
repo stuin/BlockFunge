@@ -15,12 +15,16 @@ import net.minecraft.world.World;
 
 import java.util.Stack;
 
+/*
+ * Created by Stuart Irwin on 5/6/2020.
+ */
+
 public class PointerEntity extends Entity implements Pointer {
     private static final int RANGE = 32;
-    private Stack<Integer> stack = new Stack<>();
+    private final Stack<Integer> stack = new Stack<>();
     private int speed = 120;
 
-    public PointerEntity(EntityType<Entity> entityType, World world) {
+    public PointerEntity(EntityType<? extends PointerEntity> entityType, World world) {
         super(entityType, world);
         noClip = true;
         glowing = true;

@@ -9,6 +9,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Consumer;
 
+/*
+ * Created by Stuart Irwin on 5/6/2020.
+ */
+
 public class FunctionList {
     public static Map<String, Consumer<Pointer>> functionMap = new HashMap<String, Consumer<Pointer>>() {{
         //Movement

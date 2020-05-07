@@ -1,0 +1,7 @@
+{
+  "block.blockfunge.starter": "Funge Start Block",
+  "block.blockfunge.arrow": "Arrow Block",
+  "block.blockfunge.number": "Number Block",
+  "block.blockfunge.end": "End Block",
+  "entity.blockfunge.pointer_entity": "Instruction Pointer"
+}
