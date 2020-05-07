@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "blockfunge:arrow"
+    },
+    {
+      "item": "minecraft:dispenser"
+    }
+  ],
+  "result": {
+    "item": "blockfunge:starter"
+  }
+}

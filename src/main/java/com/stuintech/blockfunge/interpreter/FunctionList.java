@@ -1,5 +1,6 @@
 package com.stuintech.blockfunge.interpreter;
 
+import com.stuintech.blockfunge.block.NumberBlock;
 import com.stuintech.blockfunge.interpreter.functions.Arithmatic;
 import com.stuintech.blockfunge.interpreter.functions.Movement;
 import net.minecraft.block.FacingBlock;
@@ -40,5 +41,10 @@ public class FunctionList {
         put("block.minecraft.netherack", Pointer::pop);
         put("block.minecraft.nether_brick", (p) -> p.getStack().clear());
         put("block.minecraft.end_stone", Pointer::stop);
+        
+        //Custom Blocks
+        put("block.blockfunge.arrow", (p) -> p.setDirection(p.getBlock().get(FacingBlock.FACING)));
+        put("block.blockfunge.number", (p) -> p.push(p.getBlock().get(NumberBlock.POWER)));
+        put("block.blockfunge.end", Pointer::stop);
     }};
 }
