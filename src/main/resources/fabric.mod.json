@@ -22,7 +22,7 @@
       "com.stuintech.blockfunge.BlockFunge"
     ],
     "client": [
-      "com.stuintech.blockfunge.BlockFunge"
+      "com.stuintech.blockfunge.ClientBlockFunge"
     ]
   },
 

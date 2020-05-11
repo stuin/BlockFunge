@@ -1,5 +1,6 @@
 package com.stuintech.blockfunge.entity;
 
+import com.stuintech.blockfunge.BlockFunge;
 import com.stuintech.blockfunge.interpreter.Pointer;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -7,6 +8,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.Packet;
 import net.minecraft.network.packet.s2c.play.EntitySpawnGlobalS2CPacket;
+import net.minecraft.text.LiteralText;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
@@ -26,8 +28,10 @@ public class PointerEntity extends Entity implements Pointer {
 
     public PointerEntity(EntityType<? extends PointerEntity> entityType, World world) {
         super(entityType, world);
-        noClip = true;
+        //noClip = true;
         glowing = true;
+        this.setCustomName(new LiteralText("Custom Pointer"));
+        BlockFunge.LOGGER.info("Spawned pointer");
     }
 
     public PointerEntity(World world) {
@@ -37,6 +41,9 @@ public class PointerEntity extends Entity implements Pointer {
     public PointerEntity(World world, BlockPos pos, Direction direction) {
         this(ModEntities.pointerEntity, world);
         setDirection(direction);
+        //setPos(pos.getX(), pos.getY(), pos.getZ());
+        updatePosition(pos.getX(), pos.getY(), pos.getZ());
+        setInvisible(false);
     }
 
     @Override
@@ -131,6 +138,11 @@ public class PointerEntity extends Entity implements Pointer {
     @Override
     public boolean inRange(BlockPos pos) {
         return pos.isWithinDistance(pos, RANGE);
+    }
+
+    @Override
+    public boolean shouldRender(double distance) {
+        return true;
     }
 
     @Override

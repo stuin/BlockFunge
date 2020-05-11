@@ -11,7 +11,7 @@ import org.apache.logging.log4j.Logger;
  * Created by Stuart Irwin on 5/6/2020.
  */
 
-public class BlockFunge implements ModInitializer, ClientModInitializer {
+public class BlockFunge implements ModInitializer {
 	public static final String MODID = "blockfunge";
 	public static final Logger LOGGER = LogManager.getLogger(MODID);
 
@@ -21,11 +21,4 @@ public class BlockFunge implements ModInitializer, ClientModInitializer {
 		ModEntities.register();
 		ModBlocks.register();
 	}
-
-	@Override
-	public void onInitializeClient() {
-		LOGGER.debug("Client setup");
-		ModEntities.clientRegister();
-	}
-
 }
